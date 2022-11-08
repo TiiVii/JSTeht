@@ -7,22 +7,30 @@
 <body>
 
 <h2>The root of your desire</h2>
-<p id="roots"></p>
+<p id ='roots'></p>
 
 <script>
   'use strict';
 
-  const checkity = confirm('Should I calculate the square root?')
-  if (checkity == 'OK') {
-      const number = prompt('Awesome sauce, what number should I calculate for you?')
-  }
-  let
-  document.querySelector('#roots').innerHTML=('The square root of ')
+  let checkity = confirm('Should I calculate the square root?');
+  if (checkity == true) {
+      const number = parseInt(prompt('Awesome sauce, what number should I calculate for you?'));
 
-  while
+      if (number >=0) {let rootery = Math.sqrt(number)
+      document.querySelector('#roots').innerHTML=(`The square root of ${number} is ${rootery.toFixed(2)}`)}
+          else {
+              document.querySelector('#roots').innerHTML=('The square root of a negative number is not defined.');
+          }
+  }
+  else if (checkity == false) {
+      document.querySelector('#roots').innerHTML=('Fine, do it yourself then. Good day!');
+  }
+
+
+
 
 
 </script>
 
 </body>
-</html>/
+</html>
