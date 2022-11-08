@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viitonen</title>
+</head>
+<body>
+
+<h3>THE YEAR THY SEEKS</h3>
+<p id ='result'></p>
+
+<script>
+  'use strict';
+
+  const year = prompt('WHAT IS THE YEAR THY DESIRES, MY LORD?');
+
+  if ((year % 4 ==0) || (year % 100 ==0) && (year % 400==0)) {
+      document.querySelector('#result').innerHTML = ('The year is the one that leaps.')
+  }
+  else {
+      document.querySelector('#result').innerHTML = ('Thy year has dissatisfied the leapers. This year does not leap, you fool.')
+  }
+
+
+
+
+</script>
+
+</body>
+</html>

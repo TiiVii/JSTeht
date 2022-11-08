@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nelonen</title>
+</head>
+<body>
+
+<h1>Electronic Sortinghat</h1>
+<p id="tupa"></p>
+
+
+<script>
+    'use strict';
+
+    const name = prompt("Give us thy name, mortal.");
+
+    let house = Math.floor(Math.random()*4)+1;
+
+    if (house==1) {
+        document.querySelector('#tupa').innerHTML= (`You are a wizard, ${name} and, a Daredevil!`);
+    }
+    if (house ==2) {
+        document.querySelector('#tupa').innerHTML=(`You are a wizard, ${name}, and a Slytherin!`);
+    }
+    if (house==3) {
+        document.querySelector('#tupa').innerHTML=(`You are a wizard, ${name}, and a Ravenclaw!`);
+    }
+     if (house==4) {
+        document.querySelector('#tupa').innerHTML=(`You are a wizard, ${name}, and a Hufflepuff!`);
+    }
+     else {
+         document.querySelector('#tupa').innerHTML=('Feilasit, lähe kotiin.');
+     }
+
+
+
+</script>
+
+
+</body>
+</html>
