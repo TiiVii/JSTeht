@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ykkönen</title>
+</head>
+<body>
+
+<h2>NUMBERS?? AGAIN??</h2>
+<p id="demand"></p>
+
+<script>
+  'use strict'
+
+  const list= []
+  const shadow = []
+
+
+  for (let i=0; i<5; i++) {
+      const numbers = parseInt(prompt('Fine, give us a number'))
+      list.push(numbers)
+  }
+
+document.querySelector('#demand').innerHTML=(`${list[4]} ${list[3]} ${list[2]} ${list[1]} ${list[0]}`)
+
+
+</script>
+
+</body>
+</html>

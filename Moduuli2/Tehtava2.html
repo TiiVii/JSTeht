@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaksi</title>
+</head>
+<body>
+
+<h2>IT'S A PARTY!</h2>
+<ul id="peeps"></ul>
+
+
+
+<script>
+    'use strict'
+
+    const guest_book = []
+
+    const amount = parseInt(prompt('How many guests are we having today?'))
+    for (let i=0; i<amount; i++) {
+        const names = prompt('Is that all? Fine, I guess we can make that work. What should we call them?')
+        guest_book.push(names)
+    }
+
+document.querySelector('#peeps').innerHTML =(`Our guests are the following:`)
+
+for (let guest of guest_book) {
+    document.querySelector('#peeps').innerHTML+=(`<li> ${guest} </li>`)
+}
+
+</script>
+
+</body>
+</html>
