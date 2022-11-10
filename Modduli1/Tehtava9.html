@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ysi</title>
+</head>
+<body>
+
+<h2>The time is ripe</h2>
+<p id="digit"></p>
+
+<script>
+    'use strict';
+
+    const ask = parseInt(prompt('THE NUMBER, WHAT IS THE NUMBER?'));
+
+    let pares = []
+
+    for (let i=2; i <=ask; i++) {
+        if (ask % i ==0) {
+            pares.push(i)
+        }
+    }
+
+    if (pares.length >2) {
+    document.querySelector('#digit').innerHTML=('The number you have given me does not please me. The number is not prime.')
+    }
+    else {
+        document.querySelector('#digit').innerHTML=('The number you have given me is ripe and PRIME!')
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

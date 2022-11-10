@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seiska</title>
+</head>
+<body>
+
+<h2>The dices, master, they are talking!</h2>
+<p id="thecubes"></p>
+
+<script>
+  'use strict';
+
+  const sum = []
+  const round = []
+
+  const numbero = parseInt(prompt('How many dices do you desire, my sire?'));
+
+    for (let i =0; i<numbero; i ++) {
+        let dots = Math.floor(Math.random()*6+1)
+        sum.push(dots)
+          }
+
+    const final = sum.reduce((accumulator, value) => {
+        return accumulator + value ;
+  })
+
+    document.querySelector('#thecubes').innerHTML=(`The cubes have spoken. Your magic numbers are the following: ${sum} and the sum of them is ${final}.`)
+
+</script>
+
+</body>
+</html>
