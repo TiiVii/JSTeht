@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neljä</title>
+</head>
+<body>
+
+<hi>NUMBERS MAKE ME GROW!</hi>
+
+<p id="nuumber"></p>
+
+<script>
+    'use strict'
+
+    const listy = []
+
+let usk = parseInt(prompt('THE NUBERS HAVE RUN OUT, WE REQUIRE MORE!'))
+    listy.push(usk)
+    if (usk ==0) {
+        console.log('Ne do not trust your numbers anymore. Goodbye.')
+    }
+    else {
+        do {
+            var isk = parseInt(prompt('MORE NUMBERS, PEASANT'))
+            listy.push(isk)
+        }while (isk !=0)
+
+        if (listy.includes(0)) {
+          console.log('We do not trust your numbers anymore. Goodbye.')
+        }
+
+listy.sort((a,b) =>(b-a))
+
+console.log(`${listy}`)}
+
+</script>
+
+</body>
+</html>

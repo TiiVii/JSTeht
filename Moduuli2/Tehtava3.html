@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kolme</title>
+</head>
+<body>
+
+<h1>Doggy Daycare's guestlist!</h1>
+<ul id="dog"></ul>
+
+<script>
+    'use script'
+
+    hotel = []
+
+    for (let i=0; i<6; i++) {
+        let asker = prompt('What is the good gender-neutral called?')
+        hotel.push(asker)
+    }
+
+    hotel.sort()
+    hotel.reverse()
+
+    for (let name of hotel) {
+        document.querySelector('#dog').innerHTML+= (`<li>${name}</li>`)
+    }
+
+</script>
+
+</body>
+</html>
