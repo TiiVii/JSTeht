@@ -13,12 +13,17 @@
   'use strict'
 
   const listking = []
+  var AIMASK = 0
 
   do {
-    var AIMASK = parseInt(prompt('All I want for christmas is JUICY NUMBERS'))
       listking.push(AIMASK)
-  } while (!listking.includes(AIMASK))
+    var AIMASK = parseInt(prompt('All I want for christmas is JUICY NUMBERS'))
+  } while (!(listking.includes(AIMASK)))
 
+  listking.shift()
+  listking.sort((a,b) => (a-b))
+
+  document.querySelector('#viisastenkivi').innerHTML=('TOO MANY OF THE SAME JUICY NUMBERS, STOP IT')
   console.log(`${listking}`)
 
 </script>
