@@ -95,22 +95,22 @@ const picArray = [
 
 
 const art = document.getElementById("pictures");
-for (let i of picArray) {
+for (let t of picArray) {
   const article = document.createElement('article');
   article.class = 'card';
   const h2 = document.createElement('h2');
-  h2.innerText = i.title;
+  h2.innerText = t.title;
   article.appendChild(h2);
 
   const figure = document.createElement('figure');
   const kuva = document.createElement('img');
-  kuva.scr = i.image.medium;
-  kuva.alt = i.title;
+  kuva.src = t.image.medium;
+  kuva.alt = t.title;
 
   const cap = document.createElement('figcaption');
-  cap.innerText = i.caption;
+  cap.innerText = t.caption;
   const desc = document.createElement('desc');
-  desc.innerText = i.description;
+  desc.innerText = t.description;
 
   article.appendChild(figure);
   figure.appendChild(kuva);
