@@ -96,16 +96,16 @@ const picArray = [
 
 const art = document.getElementById("pictures");
 for (let i of picArray) {
-  const sec = document.createElement('sec');
-  sec.class = 'card';
+  const article = document.createElement('article');
+  article.class = 'card';
   const h2 = document.createElement('h2');
   h2.innerText = i.title;
   article.appendChild(h2);
 
   const figure = document.createElement('figure');
-  const img = document.createElement('img');
-  img.scr = i.image.medium;
-  img.alt = i.title;
+  const kuva = document.createElement('img');
+  kuva.scr = i.image.medium;
+  kuva.alt = i.title;
 
   const cap = document.createElement('figcaption');
   cap.innerText = i.caption;
@@ -113,9 +113,9 @@ for (let i of picArray) {
   desc.innerText = i.description;
 
   article.appendChild(figure);
-  figure.appendChild(img);
+  figure.appendChild(kuva);
   figure.appendChild(cap);
   article.appendChild(desc);
 
-  art.appendChild(sec);
+  art.appendChild(article);
 }
