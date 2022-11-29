@@ -96,49 +96,53 @@ const picArray = [
 
 const art = document.getElementById("pictures");
 for (let t of picArray) {
+  //artikkeli ja sen otsikko
   const article = document.createElement('article');
   article.class = 'card';
   const h2 = document.createElement('h2');
   h2.innerText = t.title;
   article.appendChild(h2);
 
+  //artikkelin kuva
   const figure = document.createElement('figure');
   const kuva = document.createElement('img');
   kuva.src = t.image.medium;
   kuva.alt = t.title;
 
+  //artikkelin kuvaus ja teksti
   const cap = document.createElement('figcaption');
   cap.innerText = t.caption;
   const desc = document.createElement('desc');
   desc.innerText = t.description;
 
+  //lisätään artikkeliin luotu hahmo
   article.appendChild(figure);
+  //lisätään hahmoon kuva
   figure.appendChild(kuva);
+  //lisätään hahmoon kuvaus
   figure.appendChild(cap);
+  //lisätään artikkeliin kuvaus
   article.appendChild(desc);
 
    art.appendChild(article);
 
-   //new
-  const dialog = document.querySelector('dialog')
-  const openDialog = document.querySelector('article');
-  const closeDialog = document.querySelector('span')
 
-  openDialog.addEventListener('click', () => {
-    dialog.showModal();
-    const kuvau = document.createElement('img');
+   //new
+
+  //avaa artikkelin
+  article.addEventListener('click', () => {
+    let kuvau = document.querySelector('dialog img');
     kuvau.src = t.image.large;
     kuvau.alt = t.title;
-    dialog.appendChild(kuvau)
+    dialog.showModal();
   })
+}
 
+//muuttujat dialogille, avaamiselle ja sulkemiselle, sekä niiden viitteet
+  const dialog = document.querySelector('dialog')
+  const closeDialog = document.querySelector('span')
+
+ //sulkee artikkelin
   closeDialog.addEventListener('click', () => {
     dialog.close();
   })
-  art.appendChild(article);
-
-//end
-
-
-}
-
