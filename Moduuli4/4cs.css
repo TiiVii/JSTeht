@@ -1,0 +1,84 @@
+html {
+    margin: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgba(205, 92, 92, 0.6);
+
+}
+
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgba(58, 26, 26, 0.99);
+}
+.searchbar {
+    text-align: center;
+}
+
+.searchbar input {
+    font-size: 1rem;
+    color: darkred;
+    background-color: #f0ddd5;
+}
+
+.result {
+    display: grid;
+    width: 30rem;
+}
+
+div {
+    cursor: pointer;
+    border: 1px rgba(204, 167, 167, 0.62) solid;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 3px 6px 6px rgba(101, 81, 81, 0.32);
+    transition: all 0.2s ease-in-out;
+}
+
+div.s {
+    display: flex;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    max-width: 40rem;
+}
+
+dialog {
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    display: block;
+}
+
+dialog[open] {
+    opacity: 1;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.8);
+}
+
+dialog span {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #d17bde;
+    filter: drop-shadow(2px 2px 2px #b845f5);
+}
+
+#more {
+    width: 30rem;
+    height: 40rem;
+}
+
